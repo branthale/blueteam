@@ -54,5 +54,7 @@ Microsoft doc on how to run powershell on a remote machine - useful if you don't
 ## Linux  how to do things in Linux
 
   [Linux/ReadMe.md](Linux/ReadMe.md)
-  
+
+
+## Red Team Sees you!
  ![RedTeam](https://github.com/branthale/blueteam/blob/master/RedTeamIsReady_small.png)
