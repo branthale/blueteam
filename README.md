@@ -21,6 +21,24 @@ Specific Technologies that are used in exercises are mentioned with some samples
       Staging - most malware stages - a small program pulls down a bigger one
       
          Why are you downloading EXE?
+      
+      On the box you think has malware 
+      
+        Sysinternals - tcpdump, process viewer, netstat, taskman (enable command line tab), powershell (view proccesses, named pipes, etc)
+        
+        Get a PCAP - wireshark, tcpdump
+        
+        Get a memdump of the system or process and put it into a SIFT workstation and run volitility (vol.py)
+     
+     If you are hunting on individual boxes you are doing it wrong - centralize your logs 
+       
+       But my tool is broke?  Figure something out - export pcaps, forward logs, something - you can't win monitoring indvidual machines
+       
+     Build a story with your dections 
+     
+       Found a beacon?  Cool! How did it get there?  Who is it talking to?  Any other systems doing a simlar thing? 
+
+       Check for persistance - it might show you how all this happened.  File in a user download or temp folder ?  They clicked a link somewhere.
 
 ## Microsoft 
 
