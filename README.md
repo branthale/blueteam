@@ -21,3 +21,6 @@ Microsoft doc on how to run powershell on a remote machine - useful if you don't
   https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7
   
   
+Linux  how to do things in Linux
+
+  [Linux/Linux.md](Linux/Linux.md)
