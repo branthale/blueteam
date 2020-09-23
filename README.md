@@ -1,5 +1,5 @@
 # blueteam
-Blue Teams tools and tactics from the Purple Team
+Blue Teams tools and tactics from the Purple Team (several contributers to this and some stuff straight from the internet)
 
 
 This repo is to share ideas, tools, and tactics for cyber blue teams.  
