@@ -12,7 +12,7 @@ Specific Technologies that are used in exercises are mentioned with some samples
 
   Red Team tools such as Cobalt Strike can provide a safe way to test your skills at detection.  I have included some packet captures and powershell to investigate.
   
-  Be careful not to focus on specific Cobalt Strike detections, but instead look at how malware works
+  Be careful not to focus on specific Cobalt Strike detections, but instead look at how malware works. Note the other malware Covenant, DNSCAT2, etc lots of stuff for RED to use.
     
       Beaconing - almost everything calls out from the inside to the internet over some interval.  Main protocols are the ones allowed through firewalls - http,https,dns,ssh
       
