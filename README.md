@@ -55,4 +55,4 @@ Microsoft doc on how to run powershell on a remote machine - useful if you don't
 
   [Linux/ReadMe.md](Linux/ReadMe.md)
   
- ![RedTeam](https://github.com/branthale/blueteam/blob/master/RedTeamIsReady_small.jpg)
+ ![RedTeam](https://github.com/branthale/blueteam/blob/master/RedTeamIsReady_small.png)
