@@ -10,6 +10,8 @@ Specific Technologies that are used in exercises are mentioned with some samples
 
 Red Team tools such as Cobalt Strike can provide a safe way to test your skills at detection.  I have included some packet captures and powershell to investigate.
 
+
+
 Microsoft doc on how to run powershell on a remote machine - useful if you don't have console access
 
   [Windows/RemoteCommandLine](Windows/RemoteCommandLine)  
