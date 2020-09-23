@@ -15,3 +15,7 @@ Microsoft doc on how to run powershell on a remote machine - useful if you don't
   [Windows/RemoteCommandLine](Windows/RemoteCommandLine)  
 
   [Windows/PowerShellRemotingSSH](Windows/PowerShellRemotingSSH)
+  
+  https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7
+  
+  
