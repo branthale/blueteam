@@ -1,0 +1,275 @@
+Linux command line 101
+
+###################################################################################################
+
+
+Some sites that have a step by step learning program:
+
+	Includes a linux VM online       http://linuxzoo.net/
+
+	http://linuxcommand.org/lc3_learning_the_shell.php
+
+	http://www.sparetimelabs.com/gnufordummies/linux101.php
+
+###################################################################################################
+
+The commandline should be familar to you from either linux/unix experience, dos prompt experience, or connecting into command line network devices.
+
+Commands you type will be tabbed over twice
+
+		command you will type
+
+Sytems responses will be tabbed once
+
+	response from sytems
+
+
+###################################################################################################
+
+Connecting into the system:
+
+	Normally you will connect into the system by using an SSH client such as Putty or securecrt using a username and password that is given to you.  Some operating systems have ssh built in and you can connect via a command line such as :
+	
+		ssh -l [yourusername] systemname      ie ssh -l bob 192.168.1.5 
+
+
+Once you are connected in you will have a command prompt:
+
+	haleb@haleb-virtual-machine:~$
+
+To figure out where you are in the file system type "pwd"
+
+		pwd
+
+The system responds with your current directory and then goes back to the command line:
+
+	/home/haleb
+	haleb@haleb-virtual-machine:~$
+
+Type "ls" to get a directory listing 
+
+		ls
+
+	BRO       Desktop    Downloads  Music     Public            Templates
+	broclass  Documents  git        Pictures  rules_modify.txt  Videos
+	haleb@haleb-virtual-machine:~$
+
+Perhaps you want more info about the files, type "ls -l"
+
+		ls -l
+
+	drwxrwxr-x 2 haleb haleb 4096 Sep 22 15:47 BRO
+	drwxr-xr-x 4 root  root  4096 Oct  2 14:19 broclass
+	drwxr-xr-x 2 haleb haleb 4096 Sep 19 00:46 Desktop
+	drwxr-xr-x 2 haleb haleb 4096 Sep 19 00:59 Documents
+	drwxr-xr-x 3 haleb haleb 4096 Sep 26 01:46 Downloads
+	drwxrwxr-x 2 haleb haleb 4096 Sep 22 15:47 git
+	drwxr-xr-x 2 haleb haleb 4096 Sep 19 00:59 Music
+	drwxr-xr-x 2 haleb haleb 4096 Sep 19 00:59 Pictures
+	drwxr-xr-x 2 haleb haleb 4096 Sep 19 00:59 Public
+	-rw-rw-r-- 1 haleb haleb   37 Oct  7 01:08 rules_modify.txt
+	drwxr-xr-x 2 haleb haleb 4096 Sep 19 00:59 Templates
+	drwxr-xr-x 2 haleb haleb 4096 Sep 19 00:59 Videos
+	haleb@haleb-virtual-machine:~$
+
+That gives permissions, groups, owners, size, timestamp and names.
+There are several options that you can do with ls that are chosen after the -
+ls -l   (list format)
+ls -h   (human readable file sizes)
+ls -s   (sort by file size)
+ls -t   (sort by time)
+
+Try "ls -lhst"
+
+		ls -lhst
+
+	4.0K -rw-rw-r-- 1 haleb haleb   37 Oct  7 01:08 rules_modify.txt
+	4.0K drwxr-xr-x 4 root  root  4.0K Oct  2 14:19 broclass
+	4.0K drwxr-xr-x 3 haleb haleb 4.0K Sep 26 01:46 Downloads
+	4.0K drwxrwxr-x 2 haleb haleb 4.0K Sep 22 15:47 git
+	4.0K drwxrwxr-x 2 haleb haleb 4.0K Sep 22 15:47 BRO
+	4.0K drwxr-xr-x 2 haleb haleb 4.0K Sep 19 00:59 Documents
+	4.0K drwxr-xr-x 2 haleb haleb 4.0K Sep 19 00:59 Music
+	4.0K drwxr-xr-x 2 haleb haleb 4.0K Sep 19 00:59 Pictures
+	4.0K drwxr-xr-x 2 haleb haleb 4.0K Sep 19 00:59 Public
+	4.0K drwxr-xr-x 2 haleb haleb 4.0K Sep 19 00:59 Templates
+	4.0K drwxr-xr-x 2 haleb haleb 4.0K Sep 19 00:59 Videos
+	4.0K drwxr-xr-x 2 haleb haleb 4.0K Sep 19 00:46 Desktop
+	haleb@haleb-virtual-machine:~$
+
+Want to know more about a command?   Try using the command "man" for manual 
+
+		man ls
+
+	LS(1)                            User Commands                           LS(1)
+
+	NAME
+       	ls - list directory contents
+
+
+###################################################################################################
+
+
+Getting around on the filesystem
+
+cd  - change directory 
+
+		cd Downloads
+
+Notice your command line includes part of the path 
+	
+	haleb@haleb-virtual-machine:~/Downloads$
+	
+Now type "pwd"
+
+		pwd
+	
+	/home/haleb/Downloads
+
+###################################################################################################
+
+	
+Creating directories
+
+mkdir - make directory
+
+Go to /home/[yourusername]/Downloads 
+
+		cd /home/haleb/Downloads
+
+	haleb@haleb-virtual-machine:~/Downloads$
+
+Type "mkdir test"
+
+		mkdir test
+
+List the directory "ls"
+
+		ls
+
+Note the new directory "test"
+
+Change to the new directory
+
+		cd test
+
+See where you are "pwd"
+
+###################################################################################################
+
+
+Copying and moving (rename)
+
+cp - copy a file
+mv - move or rename a file
+
+Go to /home/[yourusername]/Downloads/test
+
+		cd /home/haleb/Downloads/test
+
+Create a file using the "touch" command
+
+		touch test.txt
+
+Verify the file was created with "ls"
+
+		ls
+
+Rename the file with "mv"
+
+		mv  test.txt test.doc
+
+Verify the new name with "ls"
+
+		ls
+
+copy the file with "cp"
+
+		cp test.doc test.txt
+
+check on the files with "ls"
+
+		ls
+
+copy test.doc to the directory /home/[username]/Downloads
+
+		cp test.doc /home/haleb/Downloads
+
+change to /home/haleb/Downloads and use "ls" to check on the file
+
+
+######################################################################################################
+
+Using cat, more, less, grep, and sort
+
+Viewing and searching through files is going to important.   You will pass files to commands several ways.
+
+cat - list the file to the screen and then stop
+more - view a file one page at a time (or one line at a time) and then stop
+less - view a file and allow navigation through the file
+grep - allows you to return lines from a file that match a critierion 
+
+
+Try them out  (q to quit)
+		cat [filename]
+		more [filename]
+		less [filename]
+
+grep is used to list the file, but only return lines that match.  It is case sensitive unless you use "-i"
+The format is 	grep [options such as -i] [pattern to be matched] [file to list]
+
+		grep bob bob.txt 
+
+This will return every line that has the pattern "bob" in the text file named bob.txt.
+
+To make that case insenistive - ie to find "bob", "Bob", "bOb", "BOB", etc - we need to add the "-i" option
+
+		grep -i bob bob.txt
+
+
+To sort a text file use the "sort" command 
+
+		sort -d bob 
+
+This will list the file with the lines sorted in alphabetic order. (type "man sort" for more options)
+
+
+###########################################################################################################
+
+Passing a file from one command to another
+
+Linux uses the pipe  "|" to pass output from one command to another allowing you to stack commands
+
+Linux uses the ">" to redirect output to a file ">>" redirects output to the end of an existing file
+
+
+Lets try searching a file for a pattern and then sorting the results 
+
+		grep -i bob bob.txt | sort -d 
+
+That worked pretty good, but we want to save the sorted list to a file:
+
+		grep -i bob bob.txt | sort -d > sortedbob.txt
+
+Try some other variations:
+
+		
+		ls | grep -i bob | sort -d 
+		ls | sort -d | grep -i bob
+
+################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

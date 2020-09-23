@@ -1,0 +1,22 @@
+https://github.com/sans-blue-team/DeepBlueCLI
+
+Logging setup
+Security event 4688 (Command line auditing):
+Enable Windows command-line auditing: https://support.microsoft.com/en-us/kb/3004375
+
+Security event 4625 (Failed logons):
+Requires auditing logon failures: https://technet.microsoft.com/en-us/library/cc976395.aspx
+
+PowerShell auditing (PowerShell 5.0):
+DeepBlueCLI uses module logging (PowerShell event 4103) and script block logging (4104). It does not use transcription.
+
+See: https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
+
+To get the PowerShell commandline (and not just script block) on Windows 7 through Windows 8.1, add the following to \Windows\System32\WindowsPowerShell\v1.0\profile.ps1
+
+$LogCommandHealthEvent = $true
+$LogCommandLifecycleEvent = $true
+See the following for more information:
+
+https://logrhythm.com/blog/powershell-command-line-logging/
+http://hackerhurricane.blogspot.com/2014/11/i-powershell-logging-what-everyone.html

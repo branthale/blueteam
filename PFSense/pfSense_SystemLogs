@@ -1,0 +1,17 @@
+#Who?
+
+You
+
+#What
+
+#Where
+`The logs can be viewed in the GUI under Status > System Logs and under /var/log/ on the file system.`
+
+#Why
+
+# How should I use this for BlueTeam funtions
+
+
+### References:
+https://docs.netgate.com/pfsense/en/latest/monitoring/system-logs.html
+

@@ -1,0 +1,31 @@
+#! /bin/bash
+# Baseline Netstat
+baseline=1000
+loop=0
+echo "netstat" > basenet.txt
+echo "CNT Number of Connections"
+while [ $loop -lt $baseline ]
+do
+    netstat -plaunt | sed 's/\s\+/ /g' | cut -d' ' -f5 | grep -v  "\*" | grep "\:" | cut -d':' -f2 >> basenet.txt
+    loop=$(( $loop +1 ))
+done
+
+cat basenet.txt | sort | uniq > baselinenet.txt
+baselength="$(wc -l baselinenet.txt)"
+echo "Total Number of Connections"
+echo
+while [ 1=1 ]
+do
+date
+echo “Proto Recv-Q Send-Q Local Address Foreign Address State PID”
+
+   netstat -plaunt | sed 's/\s\+/ /g' | cut -d' ' -f5 | grep -v  "\*" | grep "\:" | cut -d':' -f2 > basenet1.txt
+   diff basenet1.txt baselinenet.txt | grep "<" | cut -d' ' -f2 > basenet_new.txt
+while IFS='' read -r line || [[ -n "$line" ]]; do
+   netstat -plaunt | grep $line | grep ":....." | grep -v "TIME"
+kill -9 `netstat -plaunt | grep $line | grep ":....." | grep -v "TIME" | awk '{print $7}' | cut -d'/' -f1`
+done < basenet_new.txt
+ sleep 5
+echo
+echo
+done

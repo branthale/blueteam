@@ -1,0 +1,50 @@
+What does the DNSCAT2 traffic look like?
+
+Here are Zeek(BRO) decodes 
+
+
+DNS - Queries  (From Security Onion Kibana Hunting DNS
+
+	Time 	source_ip   	source_port    	destination_ip    	destination_port    	uid   	_id    	query   	answers  
+	July 23rd 2020, 07:46:37.591	192.168.1.100	65033	192.168.1.190	53	CARtog1PPc581eBUK2	B1x_e3MBCvMjvbWUMDqz	d58401476da0c48fc16f840de77097e5ad.redteam.com.attlocal.net	fec401476d132f8b3c9ae5ffff6fac2252.redteam.com
+	July 23rd 2020, 07:46:37.521	192.168.1.100	65030	192.168.1.190	53	Cj0oEL1cskJ65jrbw3	01x_e3MBCvMjvbWUMDmn	ccc201476d459cde1526740de6cc4048ac.redteam.com.attlocal.net	95b501476df3628562c044ffff6fac2252.redteam.com
+	July 23rd 2020, 07:46:37.431	192.168.1.100	65027	192.168.1.190	53	CEvkKz4wGOSSMM6VR8	EFx_e3MBCvMjvbWUMDq0	e4bd01476d844af6e5b0860de55b2470bb.redteam.com.attlocal.net	525401476d6f0b1938d8bdffff6fac2252.redteam.com
+	July 23rd 2020, 07:46:37.365	192.168.1.100	65024	192.168.1.190	53	COfLuLpvPramNkPs2	8lx_e3MBCvMjvbWUMDms	7e3601476d4fa7767858f20de46317ad60.redteam.com.attlocal.net	90f601476d1bd2242845fbffff6fac2252.redteam.com
+	July 23rd 2020, 07:46:37.286	192.168.1.100	65021	192.168.1.190	53	CoHolv3aoxuP54qx14	Blx_e3MBCvMjvbWUMDqz	7d3b01476d712939c276d70de31298b57a.redteam.com.attlocal.net	73a501476dfa40d6a05946ffff6fac2252.redteam.com
+	July 23rd 2020, 07:46:37.217	192.168.1.100	65018	192.168.1.190	53	Cj6bx73S9vrVtj5Oi	_Fx_e3MBCvMjvbWUMDmu	f87701476d5112e9a732df0de28dd242e6.redteam.com.attlocal.net	TXT 34 c0f401476d4060ba787d09ffff6fac2252
+	July 23rd 2020, 07:46:37.141	192.168.1.100	65014	192.168.1.190	53	CjoTcl38sxXD0nPyK5	D1x_e3MBCvMjvbWUMDq0	b31901476df685856180bb0de17b8d28b3.redteam.com.attlocal.net	bda401476d524ca6d1b246ffff6fac2252.redteam.com
+	July 23rd 2020, 07:46:35.084	192.168.1.100	65008	192.168.1.190	53	CHVgmo4oZcW49OUt59	q1x_e3MBCvMjvbWUJzeY	98dc01476dbe10725c38f40de0bad54f56.redteam.com.attlocal.net	cdd101476d1247796b744fffff6fac2252.redteam.com
+	July 23rd 2020, 07:46:35.015	192.168.1.100	65005	192.168.1.190	53	CIuyBb4WfVGu8WuVOb	hFx_e3MBCvMjvbWUJzeU	12d201476db30092ab8d1c0ddfb32052ea.redteam.com.attlocal.net	TXT 34 337d01476da1d0e451d9d5ffff6fac2252
+	July 23rd 2020, 07:46:34.945	192.168.1.100	65002	192.168.1.190	53	CPaSbZ3AV5vkMp7gSb	wVx_e3MBCvMjvbWUJzei	729101476dd9cf0074a6ba0dded126a2c2.redteam.com.attlocal.net	3f1d01476db5f75337dbaeffff6fac2252.redteam.com
+
+Data Table visualization, not yet accessible
+Query 	Count 
+000201476db34940f25bc2020a1fbc2502.redteam.com.attlocal.net	1
+000f01476d157ff610e40b0c9c9f6dabee.redteam.com.attlocal.net	1
+003901476d5d416851f9ad0a256b607736.redteam.com.attlocal.net	1
+005e01476d2d7e096586a90ba3459b56f8.redteam.com.attlocal.net	1
+007901476d456841a5a72e06e12432212e.redteam.com.attlocal.net	1
+008501476d59607218e8460b33b80a4205.redteam.com.attlocal.net	1
+008c01476df145143a836a06c21f940241.redteam.com.attlocal.net	1
+009601476d226d39544afd02309a1d818f.redteam.com.attlocal.net	1
+00a001476d042639f6b0b201c3f96124d2.redteam.com.attlocal.net	1
+00e401476d4b1d3f08f60e0969dbdb754e.redteam.com.attlocal.net	1
+Export:
+  
+Raw 
+   
+Formatted 
+DNS - Answers
+
+Data Table visualization, not yet accessible
+Answer 	Count 
+14b401476de1cf3bef07c7ffff6fac2252.redteam.com	3
+4efb01476d9e896c8a5647ffff6fac2252.redteam.com	3
+a31501476d33b399fba241ffff6fac2252.redteam.com	3
+0a1b01476d25a56bf7e810ffff6fac2252.redteam.com	2
+186e01476df87961f243d2ffff6fac2252.redteam.com	2
+1e1101476ddb8a5d518882ffff6fac2252.redteam.com	2
+20de01476d76bfa8b56199ffff6fac2252.redteam.com	2
+29c201476dd68048f76c8fffff6fac2252.redteam.com	2
+2e2601476d5d105730c2cfffff6fac2252.redteam.com	2
+360d01476d6bac60702277ffff6fac2252.redteam.com	2

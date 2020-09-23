@@ -1,0 +1,7 @@
+In Taskmanager 
+
+Right clikc in a field name such as "Name" or "Status"
+
+Check PID and Commandline 
+
+
