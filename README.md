@@ -50,6 +50,9 @@ Microsoft doc on how to run powershell on a remote machine - useful if you don't
   
   https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7
   
+  copy update.exe \\WIN7-2\c$
+  WMIC /node:"WIN7-2" process call create "cmd.exe /c c:/update.exe
+  
   
 ## Linux  how to do things in Linux
 
